@@ -15,3 +15,43 @@ console.log(teacher3);
 // fullTimeEmployee: false
 // lastName: "Doe"
 // location: "London"
+
+interface Directors extends Teacher {
+  numberOfReports: number;
+}
+
+const director1: Directors = {
+  firstName: 'John',
+  lastName: 'Doe',
+  location: 'London',
+  fullTimeEmployee: true,
+  numberOfReports: 17,
+};
+console.log(director1);
+
+// should print
+// Object
+// firstName: "John"
+// fullTimeEmployee: true
+// lastName: "Doe"
+// location: "London"
+// numberOfReports: 17
+
+function printTeacher(firstName: string, lastName:string) : string =>{
+  return '${firstName.charAt(0)}.${lastName}'; 
+}
+
+interface printTeacherFunction {
+  (firstName: string, lastName: string): string;
+}
+interface StudentClass {
+  constructor(public firstName: string,
+  lastName: string){}
+  workOnHomework(): string {
+    return "Currently working";
+  }
+  displayName(): string {
+    return this.firstName;
+  }
+  
+}
