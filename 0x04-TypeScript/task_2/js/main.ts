@@ -57,3 +57,17 @@ executeWork(createEmployee(200));
 //Getting to work
 executeWork(createEmployee(1000));
 //Getting to director tasks
+
+type Subjects = "Math" | "History";
+
+function techclass(todayClass: subjects): string{
+  if (todayClass === "Math") {
+    return "Teaching Math";
+  } else if (todayClass === "History") {
+    return "Teaching History";
+  }
+}
+teachClass('Math');
+//Teaching Math
+teachClass('History');
+//Teaching History
